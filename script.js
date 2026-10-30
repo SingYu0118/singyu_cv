@@ -60,9 +60,63 @@ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
 document.getElementById("year").textContent=new Date().getFullYear();
 
 const carousel=document.getElementById("projectCarousel");
-const scrollProjects=direction=>carousel.scrollBy({left:direction*Math.min(760,window.innerWidth*.82),behavior:"smooth"});
-document.getElementById("projectPrev").addEventListener("click",()=>scrollProjects(-1));
-document.getElementById("projectNext").addEventListener("click",()=>scrollProjects(1));
+const projectCards=[...carousel.querySelectorAll(".project-card")];
+const projectDots=document.getElementById("projectDots");
+const projectCurrent=document.getElementById("projectCurrent");
+const projectTotal=document.getElementById("projectTotal");
+let activeProject=0;
+
+projectTotal.textContent=String(projectCards.length).padStart(2,"0");
+carousel.tabIndex=0;
+projectCards.forEach((card,index)=>{
+  const dot=document.createElement("button");
+  dot.className="project-dot";
+  dot.type="button";
+  dot.setAttribute("aria-label",`Show project ${index+1}`);
+  dot.addEventListener("click",()=>showProject(index));
+  projectDots.append(dot);
+});
+const dots=[...projectDots.children];
+
+function showProject(index){
+  activeProject=(index+projectCards.length)%projectCards.length;
+  const previous=(activeProject-1+projectCards.length)%projectCards.length;
+  const next=(activeProject+1)%projectCards.length;
+  projectCards.forEach((card,cardIndex)=>{
+    card.classList.toggle("is-active",cardIndex===activeProject);
+    card.classList.toggle("is-prev",cardIndex===previous);
+    card.classList.toggle("is-next",cardIndex===next);
+    card.classList.toggle("is-far",cardIndex!==activeProject&&cardIndex!==previous&&cardIndex!==next);
+    card.setAttribute("aria-hidden",cardIndex===activeProject?"false":"true");
+  });
+  dots.forEach((dot,dotIndex)=>dot.setAttribute("aria-current",dotIndex===activeProject?"true":"false"));
+  projectCurrent.textContent=String(activeProject+1).padStart(2,"0");
+}
+
+document.getElementById("projectPrev").addEventListener("click",()=>showProject(activeProject-1));
+document.getElementById("projectNext").addEventListener("click",()=>showProject(activeProject+1));
+carousel.addEventListener("keydown",event=>{
+  if(event.key==="ArrowLeft"){event.preventDefault();showProject(activeProject-1)}
+  if(event.key==="ArrowRight"){event.preventDefault();showProject(activeProject+1)}
+});
+let swipeStart=0;
+carousel.addEventListener("pointerdown",event=>{swipeStart=event.clientX});
+carousel.addEventListener("pointerup",event=>{const distance=event.clientX-swipeStart;if(Math.abs(distance)>55)showProject(activeProject+(distance<0?1:-1))});
+showProject(0);
+
+const sparkleField=document.getElementById("projectSparkles");
+const sparkleColors=["#8de8d1","#8fc8ff","#bca8ff","#ffffff"];
+for(let index=0;index<42;index+=1){
+  const sparkle=document.createElement("span");
+  sparkle.className="project-sparkle";
+  sparkle.style.setProperty("--x",`${4+Math.random()*92}%`);
+  sparkle.style.setProperty("--y",`${5+Math.random()*88}%`);
+  sparkle.style.setProperty("--size",`${1.5+Math.random()*3.5}px`);
+  sparkle.style.setProperty("--duration",`${2.6+Math.random()*4.4}s`);
+  sparkle.style.setProperty("--delay",`${-Math.random()*6}s`);
+  sparkle.style.setProperty("--color",sparkleColors[index%sparkleColors.length]);
+  sparkleField.append(sparkle);
+}
 
 document.querySelectorAll("[data-open-vault]").forEach(button=>button.addEventListener("click",()=>{dialog.showModal();document.body.classList.add("modal-open");passcodeInput.focus()}));
 dialog.addEventListener("close",()=>{document.body.classList.remove("modal-open");vaultStatus.textContent=""});

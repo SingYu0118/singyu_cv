@@ -18,7 +18,7 @@ An animated 104-style professional profile: clear enough for recruiters, modern 
 - Airy composition with large spacing and asymmetric sections.
 - Soft organic bubbles instead of rectangular UI cards.
 - Animated noise surface for the hero and contact sections.
-- Apple-style horizontal carousel for selected work.
+- Aceternity-inspired selected-work carousel with a focused center card, dimensional side previews, numbered pagination, keyboard/swipe controls and restrained sparkles.
 - Mint, sky, violet and peach gradients on warm neutral surfaces.
 - No portrait or stock photography.
 
@@ -32,7 +32,7 @@ An animated 104-style professional profile: clear enough for recruiters, modern 
 
 ## Responsive behavior
 
-- Desktop uses wide editorial grids and horizontally scrollable product cards.
+- Desktop uses wide editorial grids and a dimensional project carousel with side previews.
 - Tablet collapses text and feature sections to one column.
-- Mobile uses large touch targets, two-column metrics and full-width carousel cards.
+- Mobile uses large touch targets, two-column metrics and full-width carousel cards with swipe and arrow navigation.
 - Reduced-motion preferences disable continuous animation.
