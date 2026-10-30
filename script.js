@@ -186,6 +186,21 @@ carousel.addEventListener("pointerdown",event=>{
 carousel.addEventListener("pointermove",event=>{if(!carousel.classList.contains("is-dragging"))return;swipeDistance=event.clientX-swipeStart});
 carousel.addEventListener("pointerup",event=>{const distance=event.clientX-swipeStart;carousel.classList.remove("is-dragging");if(Math.abs(distance)>55)showProject(activeProject+(distance<0?1:-1))});
 carousel.addEventListener("pointercancel",()=>carousel.classList.remove("is-dragging"));
+
+let trackpadDistance=0;
+let trackpadLocked=false;
+carousel.addEventListener("wheel",event=>{
+  if(Math.abs(event.deltaX)<=Math.abs(event.deltaY)||Math.abs(event.deltaX)<4)return;
+  event.preventDefault();
+  if(trackpadLocked)return;
+  if(trackpadDistance&&Math.sign(trackpadDistance)!==Math.sign(event.deltaX))trackpadDistance=0;
+  trackpadDistance+=event.deltaX;
+  if(Math.abs(trackpadDistance)<45)return;
+  showProject(activeProject+(trackpadDistance>0?1:-1));
+  trackpadDistance=0;
+  trackpadLocked=true;
+  window.setTimeout(()=>{trackpadLocked=false},420);
+},{passive:false});
 showProject(0);
 
 function renderProjectDetail(index,open=true){
