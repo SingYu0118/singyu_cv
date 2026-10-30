@@ -25,7 +25,7 @@ const translations={
 
 translations.zh.navSkills="Skills";
 translations.en.navSkills="Skills";
-translations.zh.seeSide="從學經歷開始";
+translations.zh.seeSide="Side Project";
 translations.en.seeSide="Start with background";
 translations.zh.projectOpen="查看技術說明 ↗";
 
