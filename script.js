@@ -23,6 +23,12 @@ const translations={
   }
 };
 
+translations.zh.navSkills="Skills";
+translations.en.navSkills="Skills";
+translations.zh.seeSide="從學經歷開始";
+translations.en.seeSide="Start with background";
+translations.zh.projectOpen="查看技術說明 ↗";
+
 const projectDetails={
   zh:[
     {eyebrow:"DOCUMENT INTELLIGENCE",title:"公部門文件智慧審查平台",intro:"以可追溯、可覆核的多階段流程，把非結構化文件轉化為穩定的審查結果。",sections:[
@@ -87,6 +93,18 @@ const passcodeInput=document.getElementById("passcode");
 const unlockButton=document.getElementById("unlockButton");
 const vaultFiles=document.getElementById("vaultFiles");
 const vaultStatus=document.getElementById("vaultStatus");
+const projectDialog=document.getElementById("projectDialog");
+const projectDetailEyebrow=document.getElementById("projectDetailEyebrow");
+const projectDetailTitle=document.getElementById("projectDetailTitle");
+const projectDetailIntro=document.getElementById("projectDetailIntro");
+const projectDetailSections=document.getElementById("projectDetailSections");
+let openProjectIndex=null;
+
+const main=document.querySelector("main");
+[".hero","#experience","#skills","#bravetalk","#projects","#contact"].forEach(selector=>{
+  const section=main.querySelector(selector);
+  if(section)main.append(section);
+});
 
 function t(key){return translations[language][key]||key}
 function renderLanguage(){
@@ -94,6 +112,7 @@ function renderLanguage(){
   document.querySelectorAll("[data-i18n]").forEach(el=>{const value=translations[language][el.dataset.i18n];if(value!==undefined)el.textContent=value});
   toggle.textContent=language==="zh"?"EN":"中";
   flipIndex=0;flipWord.textContent=flipWords[language][0];
+  if(projectDialog.open&&openProjectIndex!==null)renderProjectDetail(openProjectIndex,false);
   localStorage.setItem("portfolio-language",language);
 }
 toggle.addEventListener("click",()=>{language=language==="zh"?"en":"zh";renderLanguage()});
@@ -147,9 +166,43 @@ carousel.addEventListener("keydown",event=>{
   if(event.key==="ArrowRight"){event.preventDefault();showProject(activeProject+1)}
 });
 let swipeStart=0;
-carousel.addEventListener("pointerdown",event=>{swipeStart=event.clientX});
-carousel.addEventListener("pointerup",event=>{const distance=event.clientX-swipeStart;if(Math.abs(distance)>55)showProject(activeProject+(distance<0?1:-1))});
+let swipeDistance=0;
+carousel.addEventListener("pointerdown",event=>{swipeStart=event.clientX;swipeDistance=0;carousel.classList.add("is-dragging");carousel.setPointerCapture?.(event.pointerId)});
+carousel.addEventListener("pointermove",event=>{if(!carousel.classList.contains("is-dragging"))return;swipeDistance=event.clientX-swipeStart});
+carousel.addEventListener("pointerup",event=>{const distance=event.clientX-swipeStart;carousel.classList.remove("is-dragging");if(Math.abs(distance)>55)showProject(activeProject+(distance<0?1:-1))});
+carousel.addEventListener("pointercancel",()=>carousel.classList.remove("is-dragging"));
 showProject(0);
+
+function renderProjectDetail(index,open=true){
+  const detail=projectDetails[language][index];
+  if(!detail)return;
+  openProjectIndex=index;
+  projectDetailEyebrow.textContent=detail.eyebrow;
+  projectDetailTitle.textContent=detail.title;
+  projectDetailIntro.textContent=detail.intro;
+  projectDetailSections.replaceChildren();
+  detail.sections.forEach(([title,body])=>{
+    const section=document.createElement("section");
+    const heading=document.createElement("h3");
+    const paragraph=document.createElement("p");
+    heading.textContent=title;
+    paragraph.textContent=body;
+    section.append(heading,paragraph);
+    projectDetailSections.append(section);
+  });
+  if(open&&!projectDialog.open){projectDialog.showModal();document.body.classList.add("modal-open")}
+}
+
+document.querySelectorAll("[data-project-open]").forEach(button=>{
+  button.addEventListener("pointerup",()=>{
+    if(Math.abs(swipeDistance)<12)renderProjectDetail(Number(button.dataset.projectOpen));
+  });
+  button.addEventListener("click",event=>{
+    event.stopPropagation();
+    if(event.detail===0)renderProjectDetail(Number(button.dataset.projectOpen));
+  });
+});
+projectDialog.addEventListener("close",()=>{document.body.classList.remove("modal-open");openProjectIndex=null});
 
 const sparkleField=document.getElementById("projectSparkles");
 const sparkleColors=["#8de8d1","#8fc8ff","#bca8ff","#ffffff"];
