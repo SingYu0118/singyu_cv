@@ -77,9 +77,18 @@ const projectDetails={
 };
 
 const flipWords={zh:["可落地的產品能力","可擴展的系統架構","可驗證的工程成果","可維運的正式服務"],en:["production-ready products","scalable system architecture","measurable engineering outcomes","reliable production services"]};
+projectDetails.zh[0].sections.splice(2,0,["\u6548\u80fd\u512a\u5316","\u4ee5 0.92 \u76f8\u4f3c\u5ea6\u9580\u6abb\u5148\u6392\u9664\u7121\u9700\u91cd\u65b0\u63a8\u7406\u7684\u5167\u5bb9\uff0c\u518d\u4ee5\u6279\u6b21\u63a8\u8ad6\u8655\u7406\u8a9e\u610f\u5dee\u7570\u3002\u55ae\u4e00\u57fa\u6e96\u6848\u4f8b\u4e2d\uff0c\u9996\u8f2a LLM \u547c\u53eb\u7531 36 \u6b21\u964d\u70ba 1 \u6b21\uff0c\u5b8c\u6574\u6d41\u7a0b\u8017\u6642\u964d\u4f4e 44.2%\u3002"]);
+projectDetails.zh[1].sections.splice(2,0,["\u7a69\u5b9a\u4ea4\u4ed8","\u96f2\u7aef\u8207\u5730\u7aef\u6a21\u578b\u5148\u7d93\u904e\u7d71\u4e00 Schema \u8207\u4eba\u5de5\u78ba\u8a8d\uff0c\u518d\u7522\u751f\u5b57\u5e55\u3001\u9010\u5b57\u7a3f\u3001\u968e\u5c64\u5f0f\u6458\u8981\u3001\u6c7a\u8b70\u8207\u5f85\u8fa6\uff1b\u4ee5\u903e\u6642\u3001\u5099\u63f4\u8207 SSE \u5fa9\u539f\u8655\u7406\u4e2d\u65b7\u3002"]);
+projectDetails.zh[2].sections.splice(1,0,["\u6df7\u5408\u6aa2\u7d22","\u7d50\u5408\u5411\u91cf\u641c\u5c0b\u8207 BM25\uff0c\u4f7f\u7528 Reciprocal Rank Fusion \u878d\u5408\u6392\u540d\uff0c\u4e26\u53ef\u52a0\u5165 Cross-Encoder reranking\uff0c\u8b93\u56de\u7b54\u4fdd\u7559\u53ef\u8ffd\u6eaf\u8b49\u64da\u3002"],["\u7d50\u69cb\u5316\u5206\u6790","\u7d50\u69cb\u5316\u8cc7\u6599\u5148\u7d93\u610f\u5716\u9a57\u8b49\u8207\u5b89\u5168\u67e5\u8a62\u8a08\u756b\uff0c\u518d\u4ea4\u7d66\u78ba\u5b9a\u6027\u904b\u7b97\u5f15\u64ce\u57f7\u884c\uff1b\u6a21\u578b\u8ca0\u8cac\u8a9e\u8a00\u8868\u9054\uff0c\u6578\u503c\u8207\u8cc7\u6599\u904b\u7b97\u4fdd\u6301\u53ef\u91cd\u73fe\u3002"]);
+projectDetails.zh[3].sections.splice(1,0,["\u6a21\u578b\u9078\u64c7","\u5c0d\u4e3b\u8981\u7531\u5e73\u79fb\u3001\u65cb\u8f49\u3001\u7e2e\u653e\u8207\u5c11\u91cf\u526a\u5207\u69cb\u6210\u7684\u93e1\u982d\u79fb\u52d5\uff0c\u512a\u5148\u4f7f\u7528\u81ea\u7531\u5ea6\u8f03\u5c11\u7684 Affine \u6a21\u578b\uff0c\u964d\u4f4e\u5339\u914d\u9ede\u566a\u97f3\u5c0e\u81f4\u7684\u900f\u8996\u626d\u66f2\u3002"]);
+projectDetails.en[0].sections.splice(2,0,["Performance optimization","A 0.92 similarity threshold filters content that does not require new reasoning, while batched inference concentrates semantic evaluation. In one benchmark, first-pass LLM calls fell from 36 to 1 and end-to-end time improved by 44.2%."]);
+projectDetails.en[1].sections.splice(2,0,["Reliable delivery","Cloud and on-premise model paths converge through a shared schema and human review before generating captions, transcripts, hierarchical summaries, decisions and action items. Timeouts, fallbacks and SSE recovery handle interrupted processing."]);
+projectDetails.en[2].sections.splice(1,0,["Hybrid retrieval","Vector search and BM25 are fused with Reciprocal Rank Fusion, with optional cross-encoder reranking for evidence-grounded answers."],["Structured analysis","Structured data requests pass through intent validation and a safe query plan before deterministic execution. Models handle language while numerical analysis remains reproducible."]);
+projectDetails.en[3].sections.splice(1,0,["Model choice","For motion dominated by translation, rotation, scale and limited shear, an affine model reduces degrees of freedom and avoids unstable perspective distortion caused by noisy matches."]);
+
 const files={
-  "cv-zh":{path:"protected/cv-zh.enc",name:"SingYuChen_CV_Chinese_Revised.pdf",type:"application/pdf"},
-  "cv-en":{path:"protected/cv-en.enc",name:"SingYuChen_CV_English_Revised.pdf",type:"application/pdf"}
+  "cv-zh":{path:"protected/cv-zh.enc",name:"SingYuChen_CV_Chinese_Final.pdf",type:"application/pdf"},
+  "cv-en":{path:"protected/cv-en.enc",name:"SingYuChen_CV_English_Final.pdf",type:"application/pdf"}
 };
 
 let language=localStorage.getItem("portfolio-language")||"zh";
@@ -167,7 +176,13 @@ carousel.addEventListener("keydown",event=>{
 });
 let swipeStart=0;
 let swipeDistance=0;
-carousel.addEventListener("pointerdown",event=>{swipeStart=event.clientX;swipeDistance=0;carousel.classList.add("is-dragging");carousel.setPointerCapture?.(event.pointerId)});
+carousel.addEventListener("pointerdown",event=>{
+  if(event.target.closest("button,a"))return;
+  swipeStart=event.clientX;
+  swipeDistance=0;
+  carousel.classList.add("is-dragging");
+  carousel.setPointerCapture?.(event.pointerId);
+});
 carousel.addEventListener("pointermove",event=>{if(!carousel.classList.contains("is-dragging"))return;swipeDistance=event.clientX-swipeStart});
 carousel.addEventListener("pointerup",event=>{const distance=event.clientX-swipeStart;carousel.classList.remove("is-dragging");if(Math.abs(distance)>55)showProject(activeProject+(distance<0?1:-1))});
 carousel.addEventListener("pointercancel",()=>carousel.classList.remove("is-dragging"));
@@ -194,12 +209,9 @@ function renderProjectDetail(index,open=true){
 }
 
 document.querySelectorAll("[data-project-open]").forEach(button=>{
-  button.addEventListener("pointerup",()=>{
-    if(Math.abs(swipeDistance)<12)renderProjectDetail(Number(button.dataset.projectOpen));
-  });
   button.addEventListener("click",event=>{
     event.stopPropagation();
-    if(event.detail===0)renderProjectDetail(Number(button.dataset.projectOpen));
+    renderProjectDetail(Number(button.dataset.projectOpen));
   });
 });
 projectDialog.addEventListener("close",()=>{document.body.classList.remove("modal-open");openProjectIndex=null});
