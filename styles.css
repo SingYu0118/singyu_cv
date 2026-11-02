@@ -80,12 +80,18 @@ h2{font-size:clamp(2.05rem,4vw,3.8rem)}
 .gallery-zoom{display:block;width:100%;padding:0;overflow:hidden;border:0;background:var(--surface);cursor:zoom-in}
 .gallery-zoom img{transition:transform .25s ease}
 .gallery-zoom:hover img{transform:scale(1.012)}
+.gallery-detail-button{align-self:flex-start;margin-top:12px;padding:0;border:0;background:transparent;color:#34816b;font:inherit;font-size:.78rem;font-weight:800;cursor:pointer}
+.gallery-detail-button::after{content:" ↗"}
 .event-art span{font-size:clamp(2.7rem,6vw,5.5rem)}
 .art-startup span{font-size:clamp(1.8rem,3.4vw,3rem);letter-spacing:-.045em}
 .event-grid h3{font-size:1.22rem}
 .contact-content h2{font-size:clamp(3.25rem,8vw,6.5rem)}
 .project-dialog-shell h2{font-size:clamp(2.25rem,5vw,4.5rem)}
 .project-detail-intro{font-size:1rem}
+.project-detail-sections .feature-section{grid-column:1/-1;background:color-mix(in srgb,var(--mint) 10%,var(--surface))}
+.project-detail-sections .feature-section ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.project-detail-sections .feature-section li{position:relative;padding-left:16px;color:var(--muted);line-height:1.55}
+.project-detail-sections .feature-section li::before{content:"";position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:#34816b}
 .resume-shell>h2{font-size:clamp(1.9rem,3.5vw,3.2rem)}
 .resume-options h3{font-size:1.55rem}
 .vault-heading h3{font-size:1.45rem}
