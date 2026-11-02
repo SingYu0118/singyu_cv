@@ -3,22 +3,74 @@ const translations={
   en:{navImpact:"Impact",navExperience:"Experience",navProjects:"Projects",navSkills:"Skills",navSide:"Side Project",navEvents:"Community",navContact:"Contact",heroLead:"From system architecture and full-stack development to model integration and production deployment.",viewProjects:"View Projects",downloadCV:"Download CV",currentRole:"AI Team Tech Lead",currentCompany:"REAS Inc.",impactTitle:"Engineering value measured by delivery",impactPoc:"Concept validation and technical implementation",impactProjects:"Projects delivered independently",impactGov:"Major government projects",impactLead:"Technical leadership and complete system delivery",experienceTitle:"From architecture decisions to production",experienceLead:"With a foundation in statistics and data analytics, I now lead AI engineering planning, architecture and cross-functional delivery.",reas1:"Technical planning, team guidance, architecture decisions and cross-functional collaboration.",reas2:"End-to-end React, TypeScript, FastAPI, Node.js, database and API delivery.",reas3:"RAG, AI agents, LLM workflows, hybrid AI and GCP/AWS/Docker deployment.",reas4:"100+ PoCs, 30+ independently delivered projects and 3 major government projects.",internCompany:"Revelis Biotechnology Co., Ltd.",internBody:"Data cleansing, statistical analysis, visualization and model validation with Python and R.",projectsTitle:"Measurable product and system outcomes",projectsLead:"Each case covers role, architecture, challenges, solutions and measured impact.",privateSummary:"Led the complete product architecture across frontend, backend, database, AI backend, RAG, agents, workflows, model deployment and integration.",projectGov:"Government Document Intelligence",phaseTime:"stage time",totalTime:"end-to-end",projectVision:"Computer Vision & Time-Lapse",visionSummary:"Image alignment, stabilization and time-lapse output using SIFT, FLANN and affine transformations.",viewDetails:"View details",skillsTitle:"Capabilities organized by system layer",braveLead:"An independently designed, built and deployed AI speaking and two-person travel collaboration PWA.",liveDemo:"Live Demo ↗",braveEnglish:"AI speaking practice and voice features",braveTravel:"Travel collaboration and serverless architecture",eventsTitle:"Google Cloud technical community",eventsLead:"Continuous learning across AI, data and cloud architecture, brought back into product validation.",contactLead:"Open to conversations about AI systems, full-stack engineering and product delivery.",resumeTitle:"Choose a resume version",resumeIntro:"Download the public version directly. The full version retains the original passphrase protection.",publicDesc:"Public download with professional experience and project outcomes.",fullDesc:"Complete version, available after the original passphrase check.",enterPassphrase:"Enter passphrase →",resume104Desc:"User-provided 104 PDF with phone number and mailing address covered.",download104:"Download 104 Resume PDF ↓",vaultTitle:"Full CV",askPassphrase:"Request the passphrase by email ↗",passphraseLabel:"Passphrase",confirm:"Continue",unlocking:"Checking…",unlocked:"Verified. Choose a CV.",invalid:"Incorrect passphrase.",downloading:"Preparing download…",downloadReady:"Download started.",downloadError:"Download failed. Enter the passphrase again."}
 };
 
-translations.zh.heroLead="負責系統架構、全端開發、模型整合與部署維運。";
-translations.en.heroLead="System architecture, full-stack development, model integration and production operations.";
-translations.zh.impactTitle="工程成果";
+translations.zh.heroLead="開發可實際上線的 AI 應用，涵蓋全端系統、LLM／RAG 與雲端部署。";
+translations.en.heroLead="Building production-ready AI applications across full-stack systems, LLM/RAG and cloud deployment.";
+translations.zh.impactTitle="成果";
 translations.en.impactTitle="Engineering Impact";
+translations.zh.impactPocTitle="AI 概念驗證";
+translations.en.impactPocTitle="AI PoCs Built";
+translations.zh.impactProjectTitle="獨立交付專案";
+translations.en.impactProjectTitle="Delivered Projects";
+translations.zh.impactGovTitle="政府大型專案";
+translations.en.impactGovTitle="Government Projects";
+translations.zh.impactLeadTitle="端到端開發";
+translations.en.impactLeadTitle="End-to-End Delivery";
+translations.zh.impactPoc="PoC 與技術可行性驗證";
+translations.en.impactPoc="Concept and technical feasibility validation";
+translations.zh.impactProjects="從需求到部署完整完成";
+translations.en.impactProjects="Delivered from requirements through deployment";
+translations.zh.impactGov="參與重要公部門系統交付";
+translations.en.impactGov="Major public-sector system delivery";
+translations.zh.impactLead="技術規劃、架構與系統交付";
+translations.en.impactLead="Technical planning, architecture and delivery";
 translations.zh.experienceTitle="工作經歷";
 translations.en.experienceTitle="Experience";
+translations.zh.reas1="技術領導：負責技術規劃、架構決策、團隊指導與跨部門協作。";
+translations.en.reas1="Technical leadership: planning, architecture decisions, team guidance and cross-functional collaboration.";
+translations.zh.reas2="全端 AI 系統：以 React、TypeScript、FastAPI、Node.js 與 PostgreSQL 完成前後端、資料庫及 API。";
+translations.en.reas2="Full-stack AI systems: frontend, backend, databases and APIs with React, TypeScript, FastAPI, Node.js and PostgreSQL.";
+translations.zh.reas3="LLM 流程優化：建置 RAG、AI Agent、OCR、Structured Output 與雲端部署流程。";
+translations.en.reas3="LLM pipeline optimization: RAG, AI agents, OCR, structured output and cloud deployment workflows.";
 translations.zh.projectsTitle="精選專案";
 translations.en.projectsTitle="Selected Projects";
+translations.zh.projectPrivate="企業私有化 AI Agent 與 RAG 平台";
+translations.en.projectPrivate="Enterprise Private AI Agent & RAG Platform";
+translations.zh.projectGov="人民團體文件智能審查平台";
+translations.en.projectGov="Government Document Intelligence Platform";
+translations.zh.projectAiaa="協會會務暨 AI 應用平台";
+translations.en.projectAiaa="Association Management & AI Platform";
+translations.zh.projectVision="影像處理與縮時影片生成系統";
+translations.en.projectVision="Computer Vision & Time-Lapse Video Processing";
+translations.zh.officialProduct="產品網站 ↗";
+translations.en.officialProduct="Official Product ↗";
+translations.zh.officialSite="官方網站 ↗";
+translations.en.officialSite="Official Site ↗";
 translations.zh.skillsTitle="技術能力";
 translations.en.skillsTitle="Skills";
+translations.zh.certificationLabel="正式認證";
+translations.en.certificationLabel="CREDENTIALS";
+translations.zh.certificationTitle="證照與認證";
+translations.en.certificationTitle="Certifications";
+translations.zh.trainingLabel="課程完成紀錄";
+translations.en.trainingLabel="COURSE COMPLETION";
+translations.zh.trainingTitle="專業訓練";
+translations.en.trainingTitle="Training";
+translations.zh.certIpas="iPAS 經濟部初級巨量資料分析師";
+translations.en.certIpas="iPAS Junior Big Data Analyst";
+translations.zh.certScraping="TQC+ 網頁資料擷取與分析 Python";
+translations.en.certScraping="TQC+ Web Data Extraction and Analysis with Python";
+translations.zh.certPython="TQC+ 程式語言 Python 3（專業級）";
+translations.en.certPython="TQC+ Python 3 Programming (Professional)";
+translations.zh.certSpss="SPSS 商業數據分析師認證（標準級）";
+translations.en.certSpss="SPSS Business Data Analyst (Standard)";
+translations.zh.trainingDatacamp="DataCamp — 資料分析與 Python 課程";
+translations.en.trainingDatacamp="DataCamp — Data analysis and Python coursework";
 translations.zh.eventsTitle="技術交流";
 translations.en.eventsTitle="Tech Community & Events";
-translations.zh.eventLinkedIn="LinkedIn 原文 ↗";
-translations.en.eventLinkedIn="LinkedIn Post ↗";
-translations.zh.eventOrganizer="主辦單位 ↗";
-translations.en.eventOrganizer="Organizer ↗";
+translations.zh.eventLinkedIn="LinkedIn post ↗";
+translations.en.eventLinkedIn="LinkedIn post ↗";
+translations.zh.eventOrganizer="活動資訊 ↗";
+translations.en.eventOrganizer="Event info ↗";
 translations.zh.eventInternal="內部活動";
 translations.en.eventInternal="Internal event";
 translations.zh.eventPhotoSource="活動紀錄：Sing-Yu Chen";
@@ -39,6 +91,10 @@ translations.zh.showPasscode="顯示通關密語";
 translations.en.showPasscode="Show passphrase";
 translations.zh.hidePasscode="隱藏通關密語";
 translations.en.hidePasscode="Hide passphrase";
+translations.zh.menuOpen="開啟導覽選單";
+translations.en.menuOpen="Open navigation menu";
+translations.zh.menuClose="關閉導覽選單";
+translations.en.menuClose="Close navigation menu";
 
 document.querySelectorAll('[data-i18n="experienceLead"], [data-i18n="projectsLead"], [data-i18n="eventsLead"], [data-i18n="contactLead"]').forEach((element) => element.remove());
 document.querySelectorAll(".timeline-type").forEach((element) => {if(element.textContent.trim()==="EXPERIENCE")element.remove()});
@@ -53,19 +109,27 @@ const projectDetails={
   "bravetalk-travel":{eyebrow:"BRAVETALK · TRAVEL",title:"Shared Travel Planning & Day-of-Trip Hub",zhIntro:"將雙人共編、每日行程、導航票券與旅行分帳集中在同一個旅程工作區。",enIntro:"A shared trip workspace for collaborative planning, daily itineraries, navigation, bookings and expenses.",zh:[['核心功能',['雙人共編每日行程、留言、確認及排序','候選地點收藏與共同決策','依日期切換的當日行程、地圖與導航','航班、住宿、交通、票券及行李清單','旅行支出紀錄與雙人分帳']],['Travel Operations','集中管理行前準備、滑雪裝備與教練、購物清單、退稅、日本必買及旅遊文件。'],['My Role','獨立完成資訊架構、共編流程、資料模型、權限邊界、PWA 體驗與 Cloudflare 部署。'],['Engineering','Cloudflare Workers 提供 API 與 Session，D1 保存共編資料，Service Worker 改善旅途中弱網路體驗。'],['Access & Safety','訪客預覽可瀏覽功能但不會修改主帳號資料；私人文件與敏感操作維持權限限制。'],['Tech Stack','JavaScript · Cloudflare Workers · D1 · Session · PWA · Service Worker · Maps']],en:[['Core Features',['Shared daily itineraries, comments, confirmations and ordering','Candidate places and collaborative decisions','Date-aware day-of-trip plans, maps and navigation','Flights, stays, transport, bookings and packing lists','Travel expenses and two-person settlement']],['Travel Operations','Centralizes pre-trip preparation, ski gear and lessons, shopping, tax-free guidance, Japan lists and travel documents.'],['My Role','Independently delivered the information architecture, collaboration flows, data model, access boundaries, PWA experience and Cloudflare deployment.'],['Engineering','Cloudflare Workers provides APIs and sessions, D1 stores shared trip data, and the service worker improves weak-network use while traveling.'],['Access & Safety','Visitor preview exposes the product without mutating owner data, while private documents and sensitive actions remain restricted.'],['Tech Stack','JavaScript · Cloudflare Workers · D1 · Session · PWA · Service Worker · Maps']]}
 };
 
+Object.assign(projectDetails["private-hub"],{zhTitle:"企業私有化 AI Agent 與 RAG 平台",enTitle:"Enterprise Private AI Agent & RAG Platform"});
+Object.assign(projectDetails["document-intelligence"],{zhTitle:"人民團體文件智能審查平台",enTitle:"Government Document Intelligence Platform"});
+Object.assign(projectDetails["aiaa-platform"],{zhTitle:"協會會務暨 AI 應用平台",enTitle:"Association Management & AI Platform"});
+Object.assign(projectDetails["computer-vision"],{zhTitle:"影像處理與縮時影片生成系統",enTitle:"Computer Vision & Time-Lapse Video Processing"});
+
 const files={"cv-zh":{path:"protected/cv-zh.enc",name:"SingYuChen_CV_Chinese_Final.pdf",type:"application/pdf"},"cv-en":{path:"protected/cv-en.enc",name:"SingYuChen_CV_English_Final.pdf",type:"application/pdf"}};
 let language=localStorage.getItem("portfolio-language")||"zh",activePasscode="",openProjectSlug=null;
-const byId=id=>document.getElementById(id),languageToggle=byId("languageToggle"),themeToggle=byId("themeToggle"),projectDialog=byId("projectDialog"),resumeDialog=byId("resumeDialog"),imageDialog=byId("imageDialog"),expandedImage=byId("expandedImage"),expandedImageCaption=byId("expandedImageCaption"),passcodeInput=byId("passcode"),passcodeToggle=byId("togglePasscode"),unlockButton=byId("unlockButton"),vaultFiles=byId("vaultFiles"),vaultStatus=byId("vaultStatus"),vaultPanel=byId("vaultPanel");
+const byId=id=>document.getElementById(id),languageToggle=byId("languageToggle"),themeToggle=byId("themeToggle"),menuToggle=byId("menuToggle"),primaryNav=byId("primaryNav"),projectDialog=byId("projectDialog"),resumeDialog=byId("resumeDialog"),imageDialog=byId("imageDialog"),expandedImage=byId("expandedImage"),expandedImageCaption=byId("expandedImageCaption"),passcodeInput=byId("passcode"),passcodeToggle=byId("togglePasscode"),unlockButton=byId("unlockButton"),vaultFiles=byId("vaultFiles"),vaultStatus=byId("vaultStatus"),vaultPanel=byId("vaultPanel");
 vaultFiles.hidden=true;vaultFiles.classList.remove("is-unlocked");
 const t=key=>translations[language][key]||key;
 function updatePasscodeToggleLabel(){const key=passcodeInput.type==="password"?"showPasscode":"hidePasscode",label=t(key);passcodeToggle.setAttribute("aria-label",label);passcodeToggle.title=label;passcodeToggle.setAttribute("aria-pressed",String(passcodeInput.type==="text"))}
-function renderLanguage(){document.documentElement.lang=language==="zh"?"zh-Hant":"en";document.querySelectorAll("[data-i18n]").forEach(el=>{const value=translations[language][el.dataset.i18n];if(value!==undefined)el.textContent=value});languageToggle.textContent=language==="zh"?"EN":"中";localStorage.setItem("portfolio-language",language);updatePasscodeToggleLabel();if(openProjectSlug)renderProject(openProjectSlug,false)}
+function updateMenuState(open){primaryNav.classList.toggle("is-open",open);menuToggle.setAttribute("aria-expanded",String(open));menuToggle.setAttribute("aria-label",t(open?"menuClose":"menuOpen"))}
+function renderLanguage(){document.documentElement.lang=language==="zh"?"zh-Hant":"en";document.querySelectorAll("[data-i18n]").forEach(el=>{const value=translations[language][el.dataset.i18n];if(value!==undefined)el.textContent=value});languageToggle.textContent=language==="zh"?"EN":"中";document.title=language==="zh"?"Sing-Yu Chen｜陳星伃｜AI Application Engineer":"Sing-Yu Chen | AI Application Engineer";localStorage.setItem("portfolio-language",language);updatePasscodeToggleLabel();updateMenuState(primaryNav.classList.contains("is-open"));if(openProjectSlug)renderProject(openProjectSlug,false)}
 languageToggle.addEventListener("click",()=>{language=language==="zh"?"en":"zh";renderLanguage()});
+menuToggle.addEventListener("click",()=>updateMenuState(!primaryNav.classList.contains("is-open")));
+primaryNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>updateMenuState(false)));
 passcodeToggle.addEventListener("click",()=>{passcodeInput.type=passcodeInput.type==="password"?"text":"password";updatePasscodeToggleLabel();passcodeInput.focus()});
 const savedTheme=localStorage.getItem("portfolio-theme")||"dark";document.documentElement.dataset.theme=savedTheme;themeToggle.addEventListener("click",()=>{const next=document.documentElement.dataset.theme==="dark"?"light":"dark";document.documentElement.dataset.theme=next;localStorage.setItem("portfolio-theme",next)});
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>entry.target.classList.toggle("visible",entry.isIntersecting)),{threshold:.08});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));byId("year").textContent=new Date().getFullYear();
-const sparkleField=byId("projectSparkles"),sparkleColors=["#8de8d1","#8fc8ff","#bca8ff","#fff"];for(let i=0;i<34;i+=1){const s=document.createElement("span");s.className="project-sparkle";s.style.cssText=`--x:${4+Math.random()*92}%;--y:${5+Math.random()*88}%;--size:${1.5+Math.random()*3.5}px;--duration:${2.6+Math.random()*4.4}s;--delay:${-Math.random()*6}s;--color:${sparkleColors[i%4]}`;sparkleField.append(s)}
-function renderProject(slug,open=true){const detail=projectDetails[slug];if(!detail)return;openProjectSlug=slug;byId("projectDetailEyebrow").textContent=detail.eyebrow;byId("projectDetailTitle").textContent=detail.title;byId("projectDetailIntro").textContent=language==="zh"?detail.zhIntro:detail.enIntro;const container=byId("projectDetailSections");container.replaceChildren();detail[language].forEach(([title,body])=>{const section=document.createElement("section"),heading=document.createElement("h3");heading.textContent=title;section.append(heading);if(Array.isArray(body)){const list=document.createElement("ul");body.forEach(item=>{const entry=document.createElement("li");entry.textContent=item;list.append(entry)});section.classList.add("feature-section");section.append(list)}else{const paragraph=document.createElement("p");paragraph.textContent=body;section.append(paragraph)}container.append(section)});if(open&&!projectDialog.open){history.pushState({project:slug},"",`#project/${slug}`);projectDialog.showModal();document.body.classList.add("modal-open")}}
+const sparkleField=byId("projectSparkles"),sparkleColors=["#8de8d1","#8fc8ff","#bca8ff","#fff"];for(let i=0;i<18;i+=1){const s=document.createElement("span");s.className="project-sparkle";s.style.cssText=`--x:${4+Math.random()*92}%;--y:${5+Math.random()*88}%;--size:${1.5+Math.random()*3.5}px;--duration:${2.6+Math.random()*4.4}s;--delay:${-Math.random()*6}s;--color:${sparkleColors[i%4]}`;sparkleField.append(s)}
+function renderProject(slug,open=true){const detail=projectDetails[slug];if(!detail)return;openProjectSlug=slug;byId("projectDetailEyebrow").textContent=detail.eyebrow;byId("projectDetailTitle").textContent=detail[`${language}Title`]||detail.title;byId("projectDetailIntro").textContent=language==="zh"?detail.zhIntro:detail.enIntro;const container=byId("projectDetailSections");container.replaceChildren();detail[language].forEach(([title,body])=>{const section=document.createElement("section"),heading=document.createElement("h3");heading.textContent=title;section.append(heading);if(Array.isArray(body)){const list=document.createElement("ul");body.forEach(item=>{const entry=document.createElement("li");entry.textContent=item;list.append(entry)});section.classList.add("feature-section");section.append(list)}else{const paragraph=document.createElement("p");paragraph.textContent=body;section.append(paragraph)}container.append(section)});if(open&&!projectDialog.open){history.pushState({project:slug},"",`#project/${slug}`);projectDialog.showModal();document.body.classList.add("modal-open")}}
 document.querySelectorAll("[data-project-open]").forEach(button=>button.addEventListener("click",()=>renderProject(button.dataset.projectOpen)));function closeProject(updateHistory=true){if(projectDialog.open)projectDialog.close();openProjectSlug=null;document.body.classList.remove("modal-open");if(updateHistory&&location.hash.startsWith("#project/"))history.back()}document.querySelector("[data-close-project]").addEventListener("click",()=>closeProject());projectDialog.addEventListener("click",event=>{if(event.target===projectDialog)closeProject()});
 window.addEventListener("popstate",()=>{if(location.hash.startsWith("#project/")){const slug=location.hash.split("/")[1];renderProject(slug,!projectDialog.open)}else if(projectDialog.open)closeProject(false)});if(location.hash.startsWith("#project/")){const slug=location.hash.split("/")[1];setTimeout(()=>renderProject(slug),0)}
 document.querySelectorAll("[data-open-resume]").forEach(button=>button.addEventListener("click",()=>{resumeDialog.showModal();document.body.classList.add("modal-open")}));function closeResume(){resumeDialog.close();document.body.classList.remove("modal-open")}document.querySelector("[data-close-resume]").addEventListener("click",closeResume);resumeDialog.addEventListener("click",event=>{if(event.target===resumeDialog)closeResume()});byId("showVault").addEventListener("click",()=>{vaultPanel.hidden=false;passcodeInput.focus();vaultPanel.scrollIntoView({behavior:"smooth",block:"nearest"})});

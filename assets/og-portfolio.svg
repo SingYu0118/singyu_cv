@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="82%" cy="18%" r="62%">
+      <stop offset="0" stop-color="#295d50"/>
+      <stop offset="1" stop-color="#08110f"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <rect x="76" y="72" width="74" height="74" rx="22" fill="#80eccb"/>
+  <text x="113" y="120" fill="#08110f" font-family="Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">SY</text>
+  <text x="76" y="224" fill="#80eccb" font-family="Arial, sans-serif" font-size="28" font-weight="700">SING-YU CHEN · 陳星伃</text>
+  <text x="76" y="334" fill="#eef7f3" font-family="Arial, sans-serif" font-size="72" font-weight="800">AI Application Engineer</text>
+  <text x="76" y="420" fill="#eef7f3" font-family="Arial, sans-serif" font-size="72" font-weight="800">&amp; Full-Stack Engineer</text>
+  <text x="76" y="516" fill="#a8b6b1" font-family="Arial, sans-serif" font-size="27">LLM / RAG · Full-Stack AI · Cloud Deployment</text>
+</svg>
