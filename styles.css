@@ -58,3 +58,41 @@ h2{font-size:clamp(2.25rem,4.5vw,4.35rem);line-height:1;letter-spacing:-.05em}
 
 @media(max-width:1040px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-profile{max-width:680px}.metric-grid article{min-height:230px}}
 @media(max-width:700px){h2{font-size:clamp(2.15rem,11vw,3.2rem)}.hero{min-height:auto;padding:120px 0 72px}.hero h1{font-size:clamp(3rem,13vw,4.5rem)}.hero-grid{gap:42px}.hero-profile{padding:22px 0 0;border-left:0;border-top:1px solid #3b5049}.hero-lead{font-size:.95rem}.metric-grid article{min-height:190px}.metric-grid .word-mark{font-size:1.5rem}.project-card h3{font-size:1.9rem}.skill-grid article{min-height:200px}.product-gallery h3{font-size:1rem}.resume-shell>h2{font-size:2.25rem}.resume-options>section{min-height:180px}}
+
+/* Compact type scale and media interactions */
+body{font-size:15px}
+h2{font-size:clamp(2.05rem,4vw,3.8rem)}
+.hero h1{font-size:clamp(3.15rem,6.5vw,6.25rem)}
+.hero-lead{font-size:clamp(.9rem,1.2vw,1rem)}
+.timeline h3{font-size:1.35rem}
+.metric-grid article{display:grid;min-height:240px;grid-template-rows:78px 48px auto;align-content:center;justify-items:start;gap:8px}
+.metric-grid strong{align-self:start;font-size:clamp(2.8rem,4.3vw,4.5rem)}
+.metric-grid .word-mark{align-self:start;font-size:clamp(1.65rem,2.2vw,2.2rem);line-height:1}
+.metric-grid h3{align-self:center;margin:0;font-size:.92rem}
+.metric-grid p{align-self:start;font-size:.8rem}
+.project-card h3{font-size:clamp(1.55rem,2.4vw,2.55rem)}
+.project-card>p:not(:first-child){font-size:.9rem}
+.project-results strong{font-size:1.3rem}
+.skill-grid h3{font-size:1.12rem}
+.skill-grid p{font-size:.82rem}
+.brave-metrics strong{font-size:2rem}
+.product-gallery h3{font-size:1.02rem}
+.gallery-zoom{display:block;width:100%;padding:0;overflow:hidden;border:0;background:var(--surface);cursor:zoom-in}
+.gallery-zoom img{transition:transform .25s ease}
+.gallery-zoom:hover img{transform:scale(1.012)}
+.event-art span{font-size:clamp(2.7rem,6vw,5.5rem)}
+.art-startup span{font-size:clamp(1.8rem,3.4vw,3rem);letter-spacing:-.045em}
+.event-grid h3{font-size:1.22rem}
+.contact-content h2{font-size:clamp(3.25rem,8vw,6.5rem)}
+.project-dialog-shell h2{font-size:clamp(2.25rem,5vw,4.5rem)}
+.project-detail-intro{font-size:1rem}
+.resume-shell>h2{font-size:clamp(1.9rem,3.5vw,3.2rem)}
+.resume-options h3{font-size:1.55rem}
+.vault-heading h3{font-size:1.45rem}
+.image-dialog{width:min(1420px,calc(100% - 28px));max-height:94vh;overflow:visible}
+.image-dialog figure{margin:0;padding:14px 14px 12px;border:1px solid var(--line);border-radius:28px;background:var(--surface);box-shadow:var(--shadow)}
+.image-dialog img{display:block;max-width:100%;max-height:82vh;margin:auto;border-radius:18px;object-fit:contain}
+.image-dialog figcaption{padding:10px 8px 2px;color:var(--muted);font-size:.78rem;font-weight:700}
+.image-dialog-close{right:10px;top:10px;background:rgba(9,17,15,.85);color:#fff}
+
+@media(max-width:700px){h2{font-size:clamp(2rem,10vw,2.8rem)}.hero h1{font-size:clamp(2.75rem,12vw,4rem)}.metric-grid article{min-height:180px;grid-template-rows:62px 42px auto;padding:20px}.metric-grid strong{font-size:2.45rem}.metric-grid .word-mark{font-size:1.35rem}.metric-grid h3{font-size:.8rem}.project-card h3{font-size:1.7rem}.event-art span{font-size:4rem}.art-startup span{font-size:2rem}.contact-content h2{font-size:3.6rem}.image-dialog figure{padding:8px;border-radius:20px}.image-dialog img{border-radius:14px}.image-dialog-close{width:40px;height:40px}}
