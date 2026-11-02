@@ -96,3 +96,12 @@ h2{font-size:clamp(2.05rem,4vw,3.8rem)}
 .image-dialog-close{right:10px;top:10px;background:rgba(9,17,15,.85);color:#fff}
 
 @media(max-width:700px){h2{font-size:clamp(2rem,10vw,2.8rem)}.hero h1{font-size:clamp(2.75rem,12vw,4rem)}.metric-grid article{min-height:180px;grid-template-rows:62px 42px auto;padding:20px}.metric-grid strong{font-size:2.45rem}.metric-grid .word-mark{font-size:1.35rem}.metric-grid h3{font-size:.8rem}.project-card h3{font-size:1.7rem}.event-art span{font-size:4rem}.art-startup span{font-size:2rem}.contact-content h2{font-size:3.6rem}.image-dialog figure{padding:8px;border-radius:20px}.image-dialog img{border-radius:14px}.image-dialog-close{width:40px;height:40px}}
+
+/* Name prominence and right-aligned desktop navigation */
+.hero-name{margin:0 0 18px;color:#eef7f3;font:800 clamp(1.15rem,1.8vw,1.5rem)/1.2 Manrope,Inter,sans-serif;letter-spacing:-.025em}
+.hero-name span{margin-left:9px;color:var(--mint);font-family:Inter,"Noto Sans TC",sans-serif;font-weight:700}
+.site-header nav{margin-left:auto;gap:20px}
+.site-header nav a{font-size:.82rem}
+.header-actions{margin-left:6px}
+
+@media(max-width:700px){.hero-name{margin-bottom:15px;font-size:1.1rem}.hero-name span{margin-left:6px}}
