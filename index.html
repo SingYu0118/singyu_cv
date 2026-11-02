@@ -9,7 +9,7 @@
   <meta property="og:description" content="System architecture, full-stack development, model integration and production operations.">
   <meta property="og:type" content="website"><meta property="og:url" content="https://singyu0118.github.io/singyu_cv/">
   <title>Sing-Yu Chen | AI Tech Lead & Full-Stack Engineer</title>
-  <link rel="stylesheet" href="styles.css?v=20261102-2">
+  <link rel="stylesheet" href="styles.css?v=20261102-5">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
     <div class="header-actions"><button id="themeToggle" class="icon-button" type="button" aria-label="Switch color theme">◐</button><button id="languageToggle" class="language-toggle" type="button" aria-label="Switch language">EN</button></div>
   </header>
   <main id="main">
-    <section id="top" class="hero noise-surface"><div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="shell hero-grid"><div class="hero-copy reveal"><p class="kicker">SING-YU CHEN</p><h1>AI Tech Lead<br><span>&amp; Full-Stack</span><br>Engineer.</h1><p class="hero-lead" data-i18n="heroLead">負責系統架構、全端開發、模型整合與部署維運。</p><div class="hero-actions"><a class="pill-button primary" href="#projects" data-i18n="viewProjects">查看專案</a><button class="pill-button secondary" type="button" data-open-resume data-i18n="downloadCV">下載履歷</button></div></div><aside class="hero-profile reveal" aria-label="Current role"><p>NOW · 2024—PRESENT</p><strong data-i18n="currentRole">AI Team Tech Lead</strong><span data-i18n="currentCompany">REAS Inc.｜睿思智慧股份有限公司</span><div class="mini-stack">React · TypeScript · FastAPI · Node.js · PostgreSQL · GCP</div></aside></div></section>
+    <section id="top" class="hero noise-surface"><div class="orb orb-one" aria-hidden="true"></div><div class="orb orb-two" aria-hidden="true"></div><div class="shell hero-grid"><div class="hero-copy reveal"><p class="kicker">SING-YU CHEN · PORTFOLIO</p><h1>AI Tech Lead<br><span>&amp; Full-Stack</span><br>Engineer.</h1><p class="hero-lead" data-i18n="heroLead">負責系統架構、全端開發、模型整合與部署維運。</p><div class="hero-actions"><a class="pill-button primary" href="#projects" data-i18n="viewProjects">查看專案</a><button class="pill-button secondary" type="button" data-open-resume data-i18n="downloadCV">下載履歷</button></div></div><aside class="hero-profile reveal" aria-label="Current role"><p>CURRENTLY · 2024—PRESENT</p><strong data-i18n="currentCompany">REAS Inc.｜睿思智慧股份有限公司</strong><span>Data Engineer · AI Team</span><div class="mini-stack">React · TypeScript · FastAPI · Node.js · PostgreSQL · GCP</div></aside></div></section>
 
     <section id="impact" class="impact-section section-pad"><div class="shell section-heading reveal"><p class="section-label">02 / ENGINEERING IMPACT</p><h2 data-i18n="impactTitle">以交付成果衡量工程價值</h2></div><div class="shell metric-grid reveal"><article><strong>100+</strong><h3>AI PoCs Built</h3><p data-i18n="impactPoc">AI 概念驗證與技術實作</p></article><article><strong>30+</strong><h3>Independently Delivered Projects</h3><p data-i18n="impactProjects">獨立完成專案</p></article><article><strong>3</strong><h3>Government Projects</h3><p data-i18n="impactGov">重要大型政府專案</p></article><article><strong class="word-mark">Tech Lead</strong><h3>End-to-End Engineering</h3><p data-i18n="impactLead">技術領導與完整系統開發</p></article></div></section>
 
@@ -45,7 +45,28 @@
   <footer><span>© <span id="year"></span> Sing-Yu Chen</span><span>AI Tech Lead · Full-Stack Engineer · New Taipei City</span></footer>
 
   <dialog id="projectDialog" class="project-dialog"><article class="project-dialog-shell"><header><p id="projectDetailEyebrow" class="section-label"></p><button class="dialog-close" type="button" data-close-project aria-label="Close">×</button><h2 id="projectDetailTitle"></h2><p id="projectDetailIntro" class="project-detail-intro"></p></header><div id="projectDetailSections" class="project-detail-sections"></div></article></dialog>
-  <dialog id="resumeDialog" class="resume-dialog"><article class="resume-shell"><button class="dialog-close" type="button" data-close-resume aria-label="Close">×</button><p class="section-label">RESUME DOWNLOADS</p><h2 data-i18n="resumeTitle">選擇履歷版本</h2><p data-i18n="resumeIntro">公開版可直接下載；完整版維持原有通關密語保護。</p><div class="resume-options"><section><span>01 · PUBLIC</span><h3>Public CV</h3><p data-i18n="publicDesc">去除電話、完整地址、出生日期與其他不必要個資。</p><div class="download-row"><a href="downloads/SingYuChen_Public_CV_Chinese.pdf" download>中文 PDF ↓</a><a href="downloads/SingYuChen_Public_CV_English.pdf" download>English PDF ↓</a></div></section><section><span>02 · PROTECTED</span><h3>Full CV</h3><p data-i18n="fullDesc">完整版本；輸入原有通關密語後下載。</p><button id="showVault" class="text-button" type="button" data-i18n="enterPassphrase">輸入通關密語 →</button></section><section><span>03 · 104</span><h3>104 Resume</h3><p data-i18n="resume104Desc">使用者提供的 104 PDF；電話與通訊地址已遮蔽。</p><a class="text-button" href="downloads/SingYuChen_104_Resume.pdf" download data-i18n="download104">下載 104 履歷 PDF ↓</a></section></div><section id="vaultPanel" class="vault-panel" hidden><div class="vault-heading"><div><span>FULL CV · PROTECTED</span><h3 data-i18n="vaultTitle">完整版履歷</h3></div><a href="mailto:ariel512305@gmail.com?subject=CV%20通關密語" data-i18n="askPassphrase">Email 索取通關密語 ↗</a></div><label for="passcode" data-i18n="passphraseLabel">通關密語</label><div class="passcode-row"><input id="passcode" type="password" autocomplete="off" spellcheck="false"><button id="unlockButton" class="pill-button vault-button" type="button" data-i18n="confirm">確認</button></div><p id="vaultStatus" class="vault-status" role="status"></p><div id="vaultFiles" class="vault-files" hidden><button type="button" data-file="cv-zh"><span>中文 Full CV</span><small>PDF ↓</small></button><button type="button" data-file="cv-en"><span>English Full CV</span><small>PDF ↓</small></button></div></section></article></dialog>
-  <script src="script.js?v=20261102-2"></script>
+  <dialog id="resumeDialog" class="resume-dialog">
+    <article class="resume-shell">
+      <button class="dialog-close" type="button" data-close-resume aria-label="Close">×</button>
+      <p class="section-label">RESUME DOWNLOADS</p>
+      <h2 data-i18n="resumeTitle">選擇履歷版本</h2>
+      <div class="resume-options">
+        <section><span>01 · PUBLIC</span><h3>Public CV</h3><div class="download-row"><a href="downloads/SingYuChen_Public_CV_Chinese.pdf" download>中文 PDF ↓</a><a href="downloads/SingYuChen_Public_CV_English.pdf" download>English PDF ↓</a></div></section>
+        <section><span>02 · PROTECTED</span><h3>Full CV</h3><button id="showVault" class="text-button" type="button" data-i18n="enterPassphrase">輸入通關密語 →</button></section>
+        <section><span>03 · 104</span><h3>104 Resume</h3><a class="text-button" href="downloads/SingYuChen_104_Resume.pdf" download data-i18n="download104">下載 104 履歷 PDF ↓</a></section>
+      </div>
+      <section id="vaultPanel" class="vault-panel" hidden>
+        <div class="vault-heading"><div><span>FULL CV · PROTECTED</span><h3 data-i18n="vaultTitle">完整版履歷</h3></div><a href="mailto:ariel512305@gmail.com?subject=CV%20通關密語" data-i18n="askPassphrase">Email 索取通關密語 ↗</a></div>
+        <label for="passcode" data-i18n="passphraseLabel">通關密語</label>
+        <div class="passcode-row">
+          <div class="password-field"><input id="passcode" type="password" autocomplete="off" spellcheck="false"><button id="togglePasscode" class="password-toggle" type="button" aria-label="顯示通關密語" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+          <button id="unlockButton" class="pill-button vault-button" type="button" data-i18n="confirm">確認</button>
+        </div>
+        <p id="vaultStatus" class="vault-status" role="status"></p>
+        <div id="vaultFiles" class="vault-files" hidden><button type="button" data-file="cv-zh"><span>中文 Full CV</span><small>PDF ↓</small></button><button type="button" data-file="cv-en"><span>English Full CV</span><small>PDF ↓</small></button></div>
+      </section>
+    </article>
+  </dialog>
+  <script src="script.js?v=20261102-5"></script>
 </body>
 </html>
