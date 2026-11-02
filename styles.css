@@ -65,11 +65,11 @@ h2{font-size:clamp(2.05rem,4vw,3.8rem)}
 .hero h1{font-size:clamp(3.15rem,6.5vw,6.25rem)}
 .hero-lead{font-size:clamp(.9rem,1.2vw,1rem)}
 .timeline h3{font-size:1.35rem}
-.metric-grid article{display:grid;min-height:240px;grid-template-rows:78px 48px auto;align-content:center;justify-items:start;gap:8px}
+.metric-grid article{display:grid;min-height:240px;grid-template-rows:78px 48px auto;align-content:center;justify-items:center;gap:8px;text-align:center}
 .metric-grid strong{align-self:start;font-size:clamp(2.8rem,4.3vw,4.5rem)}
 .metric-grid .word-mark{align-self:start;font-size:clamp(1.65rem,2.2vw,2.2rem);line-height:1}
-.metric-grid h3{align-self:center;margin:0;font-size:.92rem}
-.metric-grid p{align-self:start;font-size:.8rem}
+.metric-grid h3{align-self:center;margin:0;font-size:.92rem;text-align:center}
+.metric-grid p{align-self:start;font-size:.8rem;text-align:center}
 .project-card h3{font-size:clamp(1.55rem,2.4vw,2.55rem)}
 .project-card>p:not(:first-child){font-size:.9rem}
 .project-results strong{font-size:1.3rem}
@@ -121,7 +121,8 @@ h2{font-size:clamp(2.05rem,4vw,3.8rem)}
 .event-card .event-art{position:relative;isolation:isolate}
 .event-card .event-art::after{position:absolute;z-index:-1;inset:0;background:linear-gradient(135deg,rgba(5,14,29,.48),rgba(5,14,29,.76));content:""}
 .event-art img{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(.92)}
-.event-art span,.art-startup span{font-size:clamp(2.4rem,4vw,4rem);letter-spacing:-.055em}
+.event-art span,.art-startup span{font-size:clamp(2.4rem,4vw,4rem);letter-spacing:.075em}
+.art-startup span{letter-spacing:.035em}
 .event-art small{position:absolute;right:16px;bottom:12px;color:rgba(255,255,255,.72);font-size:.58rem;font-weight:700;letter-spacing:.04em}
 .event-card time{color:#39826f;font-size:.72rem;font-weight:800;letter-spacing:.05em}
 .event-card h3{margin:7px 0 11px;font-size:1.22rem;line-height:1.2}
@@ -151,6 +152,7 @@ section[id]{scroll-margin-top:88px}
 .product-gallery h3{display:flex;min-height:82px;align-items:center;padding-bottom:14px;text-align:center}
 .gallery-detail-button{align-self:center;margin:auto auto 0;padding:9px 16px;border:1px solid var(--line);border-radius:999px}
 .event-card .event-art span{font-size:clamp(2.4rem,4vw,4rem)}
+.vault-files button{align-items:center;min-height:62px}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid color-mix(in srgb,var(--mint) 72%,white);outline-offset:3px;box-shadow:none}
 
 @media(max-width:1040px){
