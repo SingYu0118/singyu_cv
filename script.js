@@ -5,6 +5,16 @@ const translations={
 
 translations.zh.heroLead="負責系統架構、全端開發、模型整合與部署維運。";
 translations.en.heroLead="System architecture, full-stack development, model integration and production operations.";
+translations.zh.impactTitle="工程成果";
+translations.en.impactTitle="Engineering Impact";
+translations.zh.experienceTitle="工作經歷";
+translations.en.experienceTitle="Experience";
+translations.zh.projectsTitle="精選專案";
+translations.en.projectsTitle="Selected Projects";
+translations.zh.skillsTitle="技術能力";
+translations.en.skillsTitle="Skills";
+
+document.querySelectorAll('[data-i18n="experienceLead"], [data-i18n="projectsLead"]').forEach((element) => element.remove());
 
 const projectDetails={
   "private-hub":{eyebrow:"ENTERPRISE AI PRODUCT",title:"NeuroSme Private Hub",zhIntro:"主導企業私有化 AI 產品的完整架構與端到端工程交付。",enIntro:"Led the complete architecture and end-to-end engineering delivery of an enterprise private AI product.",zh:[['Overview','企業知識檢索、AI Agent、視覺化 Workflow、多租戶權限、人工審核與私有化部署的整合平台。'],['My Role','Tech Lead；主導產品架構、前後端、資料庫、AI Backend、RAG、Agent、Workflow、模型部署與系統整合。'],['Architecture','React／TypeScript → FastAPI AI Backend → PostgreSQL／pgvector + hybrid retrieval → model routing → tools and workflows → private deployment.'],['Challenges','企業資料隔離、可稽核權限、模型輸出可控性、混合檢索品質與雲端／地端部署差異。'],['Solutions','以租戶隔離、權限治理、Schema 驗證、人工覆核、模型路由與可觀測工作流建立可靠產品邊界。'],['Impact','完成從產品介面到 AI 能力與部署維運的整套產品工程，支援企業導入與持續擴充。'],['Tech Stack','React · TypeScript · FastAPI · PostgreSQL · pgvector · BM25 · RRF · AI Agent · Workflow · Docker']],en:[['Overview','An integrated platform for enterprise knowledge, AI agents, visual workflows, multi-tenant access, human review and private deployment.'],['My Role','Tech Lead across product architecture, frontend, backend, databases, AI backend, RAG, agents, workflows, model deployment and systems integration.'],['Architecture','React/TypeScript → FastAPI AI backend → PostgreSQL/pgvector + hybrid retrieval → model routing → tools and workflows → private deployment.'],['Challenges','Tenant isolation, auditable authorization, controlled model output, retrieval quality and cloud/on-premise parity.'],['Solutions','Tenant-aware data boundaries, access governance, schema validation, human review, model routing and observable workflows.'],['Impact','Delivered the complete product engineering surface from interface and AI capabilities through deployment and operations.'],['Tech Stack','React · TypeScript · FastAPI · PostgreSQL · pgvector · BM25 · RRF · AI Agent · Workflow · Docker']]},
